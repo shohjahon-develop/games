@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="image_2"><img src={{products.img.url}}></div>
+            <div class="price_text">Price $ <span style="color: #3a3a38;">{{products.price}}</span></div>
+            <h1 class="game_text">{{products.name}}</h1>
+            <p class="long_text">{{products.bio}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="see_main">
+      </div>
+    </div>
+
+{% endblock content %}

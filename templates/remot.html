@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <!-- video section start -->
+  <div class="video_section layout_padding padding_video_0">
+    {% for Dvd in dvd %}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1 class="video_text_2">3d video game</h1>
+          <a href="{% url 'dvdDetail' Dvd.pk %}"><h1>{{Dvd.name}}</h1></a>
+          <h1>Price {{Dvd.price}} $</h1>
+          <p>{{Dvd.bio}}</p>
+          <div class="shop_bt"><a href="#">Shop Now</a></div>
+        </div>
+        <div class="col-md-6">
+          <a href="{% url 'dvdDetail' Dvd.pk %}"><div class="image_4"><img src={{Dvd.img.url}}></div></a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+  <!-- video section end -->
+
+
+  <!-- copyright section start -->
+  <div class="copyright_section">
+    <div class="container">
+      <p class="copyright_text">Copyright 2020 All Right Reserved By <a href="https://html.design/"> Free html Templates</p>
+    </div>
+  </div>
+  <!-- copyright section end -->
+  <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- javascript --> 
+    <script src="js/owl.carousel.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    $(".fancybox").fancybox({
+        openEffect: "none",
+        closeEffect: "none"
+        });
+    </script>
+</body>
+</html>
+{% endblock content %}
